@@ -12,7 +12,7 @@
 >
 > | 항목 / Field | 값 / Value |
 > | --- | --- |
-> | 개발자·사업자명 / Developer or business name (“**Developer**”) | `Donghyeok Kang` |
+> | 개발자·사업자명 / Developer or business name (“**Developer**”) | `Buseoragi (Donghyeok Kang)` |
 > | 연락처 이메일 / Contact email (“**Contact**”) | `stellary2486@gmail.com` |
 > | 준거법·관할 / Governing law and venue | `대한민국 법, 서울중앙지방법원 / Laws of the Republic of Korea; Seoul Central District Court` |
 > | 이 약관의 공개 URL / Hosted EULA URL (Steamworks의 Legal / EULA 항목에 등록하는 경우) | `https://github.com/FastDong/stellary-legal/blob/main/EULA.md` |
