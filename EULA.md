@@ -58,18 +58,7 @@
 
 ### 3. Steam 인벤토리 아이템 (선택 사항)
 
-Steam을 통해 실행한 빌드에는 선택적으로 Steam 인벤토리 서비스 기반의 크레딧·상자·스킨
-아이템이 있을 수 있습니다.
-
-- 아이템은 Valve의 Steam 인벤토리 서비스가 서버 측에서 생성·보관하는 **가상 아이템**이며,
-  **현금 가치가 없고** 환전·거래·장터 판매가 불가능합니다(`tradable:false`, `marketable:false`,
-  계정 귀속).
-- 크레딧은 Valve 서버가 집계하는 플레이 시간에 따라 지급됩니다. 개발자는 지급 주기·수량·아이템
-  구성을 예고 없이 변경하거나 기능 자체를 중단할 수 있으며, 이로 인한 보상 청구는 인정되지
-  않습니다.
-- 스킨은 외형 변경 기능일 뿐이며, 소프트웨어의 핵심 기능은 아이템 없이도 전부 사용할 수
-  있습니다. Steam 클라이언트 없이 실행하거나 SDK 없이 빌드된 경우 모든 스킨이 잠금 없이 열립니다.
-- 아이템에 관한 데이터 처리는 Valve의 SSA와 개인정보 보호정책을 따릅니다.
+**이 버전(1.0)에는 Steam 인벤토리 아이템(크레딧·상자·스킨)이 없습니다.** 모든 프리셋과 스킨은 구매만으로 전부 열려 있습니다. 나중에 인벤토리 아이템을 추가하면 이 절을 갱신하고 시행일을 바꿉니다.
 
 ### 4. 데이터와 개인정보
 
@@ -142,18 +131,7 @@ layer that reads folders on your PC; it has no connection to the Steam Workshop.
 
 ### 3. Steam Inventory items (optional)
 
-A build launched through Steam may optionally offer credit, crate, and skin items backed by the
-Steam Inventory Service.
-
-- Items are **virtual items** created and held server-side by Valve's Steam Inventory Service.
-  They have **no monetary value** and cannot be cashed out, traded, or sold on the market
-  (`tradable:false`, `marketable:false`; account-bound).
-- Credits are granted according to playtime measured by Valve's servers. The Developer may change
-  the drop schedule, amounts, or item line-up, or discontinue the feature, without notice, and no
-  claim for compensation arises from such changes.
-- Skins are cosmetic only; every core function of the Software is available without any item.
-  When run without the Steam client, or in a build made without the SDK, every skin is unlocked.
-- Data processing for items is governed by Valve's SSA and Privacy Policy.
+**This version (1.0) has no Steam Inventory items (credits, crates or skins).** Every preset and skin is unlocked by the purchase alone. If inventory items are added later, this section and the effective date will be updated.
 
 ### 4. Data and privacy
 

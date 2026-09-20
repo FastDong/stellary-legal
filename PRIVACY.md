@@ -62,12 +62,12 @@ Stellary는 **계정 로그인을 요구하지 않고, 개발자 서버가 없�
 
 | 요청 | 함께 전송되는 정보 | 상태 |
 | --- | --- | --- |
-| `https://steamcommunity.com/profiles/<SteamID64>/?xml=1` 및 `…/games?tab=all&xml=1` | **회원님의 SteamID64** (URL에 포함) | **기본값은 꺼짐이며, 동의 전에는 보내지 않습니다.** 첫 실행 때 나타나는 선택 창에서 **사용**을 고르거나 설정 > 일반 > **온라인 프로필 사용**을 켜면, **다음 실행부터** 시작 시 한 번 보냅니다. "나중에"를 고르거나 창을 닫으면 꺼진 채로 남습니다. |
+| `https://steamcommunity.com/profiles/<SteamID64>/?xml=1` 및 `…/games?tab=all&xml=1` | **회원님의 SteamID64** (URL에 포함) | **기본값은 꺼짐이며, 동의 전에는 보내지 않습니다.** 첫 실행 때 나타나는 선택 창에서 **사용**을 고르거나 설정 > 일반 > **온라인 프로필 사용**을 켜면, **켜 두는 동안 하늘을 새로 읽을 때마다**(켠 직후 한 번, 이후 시작 시·약 6시간마다·수동 새로고침 때) 보냅니다. "나중에"를 고르거나 창을 닫으면 꺼진 채로 남습니다. |
 
 이 요청은 회원님 **본인의** 공개 프로필에 적힌 "가장 많이 플레이한 게임" 목록을 읽어 하늘에
 더하기 위한 것입니다. SteamID64는 Steam 프로필 주소에 쓰이는 공개 식별자이지만, 이 앱에서
 **식별 정보가 이 PC 밖으로 나가는 지점은 이 하나뿐**이므로 기본으로 꺼 두고, 사용자가
-직접 켜야만 보내며, 언제든 다시 끌 수 있게 했습니다(끄기도 다음 실행부터 적용). 꺼 두어도
+직접 켜야만 보내며, 언제든 다시 끌 수 있게 했습니다(끄면 다음 새로고침부터 보내지 않습니다). 꺼 두어도
 1항의 로컬 파일만으로 보유·플레이 별은 그대로 표시됩니다. 요청은 Valve 서버로만 가며,
 개발자에게 전달되지 않습니다. (Valve는 자사 서버에 대한 요청을 자사 정책에 따라 처리합니다
 — 4항.)
@@ -143,13 +143,7 @@ Stellary는 **계정 로그인을 요구하지 않고, 개발자 서버가 없�
 
 ### 8. Steam 인벤토리 아이템 (선택 사항)
 
-Steam을 통해 실행한 빌드에는 선택적으로 **Steam 인벤토리 서비스** 기반의 크레딧·스킨 아이템이
-있을 수 있습니다. 이 아이템은 Valve의 Steam 인벤토리 서비스가 **서버 측에서** 생성·보관하며,
-앱은 아이템 정의 번호와 인스턴스 번호만 받아 어떤 스킨이 열렸는지 표시합니다. 모든 아이템은
-`tradable:false`, `marketable:false`로 **계정 귀속**이어서 거래·장터 판매가 불가능하고, 앱은
-이 과정에서 어떤 개인정보도 추가로 받거나 보내지 않습니다. 인벤토리 데이터는 Valve가 **Steam
-구독자 계약과 Valve 개인정보 보호정책**에 따라 처리합니다. Steam 클라이언트 없이 실행하거나
-SDK 없이 빌드된 경우 이 기능은 비활성화되고 모든 스킨이 잠금 없이 열립니다.
+**이 버전(1.0)에는 Steam 인벤토리 아이템이 없으며, 앱은 Steam 인벤토리 서비스와 통신하지 않습니다.** 나중에 추가하면 이 절을 갱신하고 시행일을 바꿉니다.
 
 ### 9. 아동의 개인정보
 
@@ -209,13 +203,13 @@ disabled**, so no browser or Steam-client login session or cookie is ever sent a
 
 | Request | Data included | State |
 | --- | --- | --- |
-| `https://steamcommunity.com/profiles/<SteamID64>/?xml=1` and `…/games?tab=all&xml=1` | **Your SteamID64** (in the URL) | **Off by default; never sent before you consent.** If you choose **Use it** in the prompt shown at first launch, or turn on Settings > General > **Use online Steam profile**, it is sent once at startup **from the next launch on**. Choosing "Not now" or closing the prompt leaves it off. |
+| `https://steamcommunity.com/profiles/<SteamID64>/?xml=1` and `…/games?tab=all&xml=1` | **Your SteamID64** (in the URL) | **Off by default; never sent before you consent.** If you choose **Use it** in the prompt shown at first launch, or turn on Settings > General > **Use online Steam profile**, it is sent **each time the sky is refreshed while the switch is on** (once right after you turn it on, then at startup, about every 6 hours, and on a manual refresh). Choosing "Not now" or closing the prompt leaves it off. |
 
 This lookup reads the "most played" list on **your own** public profile and adds those games to
 the sky. Your SteamID64 is the public identifier used in Steam profile URLs, but because this is
 **the only point in this app where an identifier leaves your PC**, it is off by default, sent
-only after you turn it on yourself, and can be turned off again at any time (turning it off also
-takes effect from the next launch). With it off, owned and played stars still appear from the
+only after you turn it on yourself, and can be turned off again at any time (once off, it is not sent
+at the next refresh or after). With it off, owned and played stars still appear from the
 local files in §1. The request goes only to Valve's servers and is never passed to the developer.
 (Valve handles requests to its own servers under its own policy — see §4.)
 
@@ -293,14 +287,7 @@ disables the capture entirely.
 
 ### 8. Steam Inventory items (optional)
 
-A build launched through Steam may optionally offer credit and skin items backed by the **Steam
-Inventory Service.** These items are created and held **server-side** by Valve's Steam Inventory
-Service; the app receives only item definition and instance numbers, to show which skins are
-unlocked. Every item is `tradable:false` and `marketable:false` — **account-bound**, so it cannot
-be traded or sold on the market — and the app neither sends nor receives any additional personal
-data in the process. Inventory data is processed by Valve under the **Steam Subscriber Agreement
-and Valve's Privacy Policy.** When run without the Steam client, or in a build made without the
-SDK, this feature is disabled and every skin is unlocked.
+**This version (1.0) has no Steam Inventory items and the app does not talk to the Steam Inventory Service.** If that changes, this section and the effective date will be updated.
 
 ### 9. Children's privacy
 
