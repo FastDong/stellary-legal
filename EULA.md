@@ -16,7 +16,7 @@
 > | 연락처 이메일 / Contact email (“**Contact**”) | `stellary2486@gmail.com` |
 > | 준거법·관할 / Governing law and venue | `대한민국 법, 서울중앙지방법원 / Laws of the Republic of Korea; Seoul Central District Court` |
 > | 이 약관의 공개 URL / Hosted EULA URL (Steamworks의 Legal / EULA 항목에 등록하는 경우) | `https://github.com/FastDong/stellary-legal/blob/main/EULA.md` |
-> | 시행일 / Effective date | `2026-09-21` |
+> | 시행일 / Effective date | `2026-09-30` |
 >
 > Steam은 기본적으로 Steam 구독자 계약(SSA)을 적용하므로 커스텀 EULA 등록은 선택 사항입니다.
 > 이 문서는 법률 자문이 아닙니다. 상업적 출시 전 필요하다면 전문가 검토를 받으십시오.
@@ -63,9 +63,10 @@
 ### 4. 데이터와 개인정보
 
 소프트웨어가 무엇을 읽고 어디로 무엇을 보내는지는 **개인정보 처리방침**(`PRIVACY.md` 및 그
-공개 URL)에 그대로 적혀 있으며, 본 약관의 일부로 편입됩니다. 요약하면: 로컬 Steam 파일을
-읽고, 사용자가 동의한 경우에만 본인 공개 프로필을 조회하며, 그 외에는 식별 정보 없는 Valve
-공개 페이지만 조회합니다. 개발자 서버는 없습니다.
+공개 URL)에 그대로 적혀 있으며, 본 약관의 일부로 편입됩니다. 요약하면: Steam 폴더 안의 파일은
+읽지 않고 Windows의 설치된 앱 목록에서 이 PC에 설치된 Steam 게임을 읽으며, 사용자가 본인의 Steam
+Web API 키를 붙여 넣은 경우에만 그 키로 Steam 공식 API(api.steampowered.com)에서 보유 게임을
+조회하고, 그 외에는 식별 정보 없는 Valve 공개 스토어 정보만 조회합니다. 개발자 서버는 없습니다.
 
 ### 5. Steam 및 제3자 상표
 
@@ -137,8 +138,10 @@ layer that reads folders on your PC; it has no connection to the Steam Workshop.
 
 What the Software reads and what it sends where is set out exactly in the **Privacy Policy**
 (`PRIVACY.md` and its hosted URL), which is incorporated into this agreement. In short: it reads
-local Steam files, looks up your own public profile only with your consent, and otherwise queries
-only public Valve pages that carry no identifier. There is no developer server.
+no file inside the Steam folders, reads the Steam games installed on this PC from the Windows
+installed-apps list, looks up your owned games through Steam's official API (api.steampowered.com)
+only if you paste your own Steam Web API key, and otherwise queries only public Valve store data
+that carries no identifier. There is no developer server.
 
 ### 5. Steam and third-party marks
 
