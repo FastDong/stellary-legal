@@ -76,9 +76,9 @@ Corporation과 **제휴, 후원, 승인 관계가 없습니다.** 소프트웨�
 
 ### 6. 보증의 부인
 
-소프트웨어는 "있는 그대로" 제공됩니다. 소프트웨어는 사용자 PC의 Steam 클라이언트 파일과
-Valve가 공개하는 정보에 의존하므로, 해당 파일·정보·엔드포인트가 변경되거나 중단되면 일부
-기능(예: 세일 별, 장르·태그, 프로필 기반 별)이 동작하지 않을 수 있습니다. 관련 법이 허용하는
+소프트웨어는 "있는 그대로" 제공됩니다. 소프트웨어는 Windows가 관리하는 설치된 앱 목록과
+Valve가 공개하는 정보·API에 의존하므로, 해당 목록·정보·엔드포인트가 변경되거나 중단되면 일부
+기능(예: 세일 별, 장르·태그, Web API 키로 불러온 라이브러리)이 동작하지 않을 수 있습니다. 관련 법이 허용하는
 최대한의 범위에서 상품성·특정 목적 적합성·비침해에 대한 명시적·묵시적 보증을 부인합니다.
 
 ### 7. 책임의 제한
@@ -152,10 +152,10 @@ displayed for identification and information only.
 
 ### 6. Disclaimer of warranty
 
-The Software is provided "as is". It depends on Steam client files on your PC and on information
-Valve publishes; if those files, that information, or those endpoints change or become
-unavailable, some features (for example sale stars, genres and tags, or profile-based stars) may
-stop working. To the fullest extent permitted by law, all express and implied warranties,
+The Software is provided "as is". It depends on the installed-apps list kept by Windows and on
+information and APIs Valve publishes; if that list, that information, or those endpoints change or
+become unavailable, some features (for example sale stars, genres and tags, or the library loaded
+with your Web API key) may stop working. To the fullest extent permitted by law, all express and implied warranties,
 including merchantability, fitness for a particular purpose, and non-infringement, are disclaimed.
 
 ### 7. Limitation of liability
